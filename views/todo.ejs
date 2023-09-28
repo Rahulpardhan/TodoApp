@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    body {
+        background-color: #abb4ba;
+    }
+
+    .parent-container {
+        background-color: rgb(139, 137, 134);
+        height: 80vh;
+        width: 900px;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    #container {
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    .child-container1 {
+        background-color: white;
+        width: 55vw;
+        margin: 10px;
+        padding: 10px;
+        box-shadow: 0px 1px 2px 4px #efeded;
+    }
+
+    .child-container1 p {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    #to-do-list {
+        height: 300px;
+        margin-top: 20px;
+        list-style: none;
+        overflow: auto;
+        margin: 20px;
+        /* padding-bottom: 20px;
+        border: 1px solid black;  */
+
+    }
+
+    #to-do-list li {
+        border-top: 1px solid rgb(213, 219, 219);
+        border-bottom: 1px solid rgb(231, 236, 236);
+        position: relative;
+        padding-left: 1px;
+        padding: 20px;
+        border-radius: 2px;
+        text-align: justify;
+        padding-right: 155px;
+    }
+
+    li button {
+        background-color: #e6ecdd;
+        border-radius: 5px;
+        position: absolute;
+        top: 20px;
+        padding: 3px;
+        right: 5px;
+
+    }
+
+    li input {
+        position: absolute;
+        font-size: 20px;
+        top: 25px;
+        right: 40px;
+    }
+
+    .done {
+        text-decoration: line-through;
+        color: black;
+
+    }
+
+    .child-container2 {
+        /* background-color: aqua; */
+        width: 40%;
+        margin: 10px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .child-container2 textarea {
+        width: 20vw;
+        height: 30vh;
+        font-size: 20px;
+    }
+
+
+    .file-submit #input-img {
+        width: 15vw;
+        background-color: rgb(123, 140, 134);
+        padding: 10px;
+        position: relative;
+        top: 10px;
+
+    }
+
+    .form-submit {
+        position: relative;
+        top: 30px;
+        padding: 10px;
+        border: none;
+        font-weight: bold;
+        border-radius: 10px;
+        background-color: rgb(179, 244, 216);
+    }
+
+    .form-submit:hover {
+        cursor: pointers;
+        background-color: #10604f;
+        color: #fff;
+    }
+
+    .inputimage {
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 10px;
+        left: 320px;
+
+        align-items: center;
+
+    }
+</style>
+
+<body>
+
+    <%- include('./partials/header') %>
+        <div class="parent-container">
+            <div id="container">
+                <div class="child-container1">
+                    <h1>TASK LIST</h1>
+                    <P>Add tasks to your list by typing to the right and pressing enter. you may then view pending tasks
+                        below.
+                    </P>
+
+                    <div id="to-do-list">
+
+                    </div>
+                </div>
+                <div class="child-container2">
+                    <form enctype="multipart/form-data">
+                        <textarea id="inputbox" autofocus name="w3review" placeholder="Enter Todo here.." rows="8"
+                            cols="20"></textarea>
+                        <div class="file-submit">
+                            <input type="file" name="image" id="input-img">
+
+                            <button class="form-submit">Add Task</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script src="/todoScript.js"></script>
+</body>
+
+</html>

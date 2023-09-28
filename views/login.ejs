@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: border-box;
+        }
+
+        body {
+        
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #081b29;
+        }
+        .container{
+            position: relative;
+            margin-top: 80px;
+            width: 400px;
+            height: 400px;
+            border: 2px solid aqua;
+            box-shadow:0px 0px 19px 7px #0ef;
+        }
+        .container .form-box{
+            position: absolute;
+            top: 0;
+            left: 5%;
+            width: 90%;
+            height: 100%;
+            /* background-color: rgb(230, 141, 25); */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .wrapper{
+            left: 0;
+            padding: 0 40px;
+        }
+        .header{
+        font-size: 20px;   
+        color: white;
+        text-align: center; 
+        }
+        .form-box .input-box{
+            position: relative;
+            width: 100%;
+            height: 18%;
+            /* background-color: seagreen; */
+            margin: 25px 0px;
+        }
+        .input-box input{
+            width: 100%;
+            height: 60%;
+            padding-top: 8px;
+            font-size: 20px;
+            color:#fff;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid aqua;
+        }
+
+        .input-box label{
+            position: absolute;
+            top: -9px;
+            left: 0;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: aqua;
+            pointer-events: none;
+            transition: .5s;
+        }
+       
+        
+        .submit{
+            position: relative;
+            width: 100%;
+            height: 18%;
+            background-color: transparent;
+            border: 2px solid aqua;
+            outline: none;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 600;
+            z-index: 1;
+            overflow: hidden;
+
+        }
+        .submit::before{
+            content:'';
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 300%;
+            background: linear-gradient(#081b29,#0ef,#081b29);
+            z-index: -1;
+            transition: .5s;
+            
+           
+        }
+        .submit:hover:before{
+            top:0;
+        }
+        .logsign-link{
+            font-size: 15.5px;
+            color: #fff;
+            text-align: center;
+            margin: 20px 0 10px;
+        }
+        .logsign-link p a{
+            color: aqua;
+            text-decoration: none;
+            font-weight: 600;
+           
+        }
+        .logsign-link p a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form  class="form-box" method="post" action="/login">
+            <div class="header">
+                <h2>Login</h2>
+            </div>
+            <div class="wrapper"> 
+            <div class="input-box">
+            <label for="username">Username</label>
+            <input type="text" id="username" class=" input" name="username" autofocus required/>
+          
+            </div>
+          
+            <div class="input-box">
+            <label for="password">password</label>
+            <input type="password" id="password" class="input" name="password"  required />
+
+        </div>
+        <% if (error){ %>
+            <p style="color: brown; margin: 20px; font-size: 20px;"><%= error %></p>
+        <% } %>
+
+                <button class="submit" id="loginSubmit">Login</button>
+                <div class="logsign-link">
+            <p>Don't have an account?<a href="/signup">Signup</a></p> 
+            </div>
+        </form>
+    </div>
+    </div>
+
+    <script src="/"></script>
+</body>
+
+</html>

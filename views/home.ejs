@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            border: border-box;
+        }
+
+        .header {
+            background-color: rgb(80, 83, 83);
+
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar ul {
+            overflow: auto;
+            text-transform: uppercase;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 15px 15px;
+
+        }
+
+        .navbar li a {
+            padding: 3px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar li a.active,
+        a:hover {
+            border-bottom: 2px solid rgb(7, 206, 246);
+            color: rgb(7, 206, 246);
+            ;
+            /* background-color: rgb(244, 153, 34); */
+
+        }
+
+        .artical {
+            height: 78.8vh;
+            padding-left: 55px;
+            padding-top: 40px;
+            padding-right: 55px;
+            padding-bottom: 40px;
+            color: #fff;
+            background-color: #081b29;
+        }
+
+        .artical p {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="div">
+                <ul>
+                    <li><a href="/" class="active">HOME</a></li>
+                    <li><a href="/contact">CONTACT</a></li>
+                    <li><a href="/todo">Todo</a></li>
+
+                </ul>
+            </div>
+            <div class="div">
+                <ul>
+
+                    <li><a href="/signup">Signup</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="artical">
+        <div class="heading">
+            <h1>Welcome to My Home Page</h1>
+            <h5>You can add your tasks.</h5>
+            <h3>To add your tasks, go to <span><a href="/todo">todo</a></span> tab</h3>
+
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, vitae. Temporibus ea blanditiis harum,
+                perspiciatis laudantium earum ab vitae cupiditate velit fugiat adipisci similique laborum ipsa
+                voluptatibus
+                corrupti nihil aspernatur!</p>
+        </div>
+</body>
+
+</html>

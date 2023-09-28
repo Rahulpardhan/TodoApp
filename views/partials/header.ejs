@@ -1,0 +1,68 @@
+<style>
+    * {
+        margin: 0;
+        border: border-box;
+    }
+
+    .header {
+        background-color: rgb(80, 83, 83);
+
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar ul {
+        overflow: auto;
+        text-transform: uppercase;
+    }
+
+    .navbar li {
+        float: left;
+        list-style: none;
+        margin: 15px 15px;
+
+    }
+
+    .navbar li a {
+        padding: 3px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .navbar li a.active,
+    a:hover {
+        border-bottom: 2px solid rgb(7, 206, 246);
+        color: rgb(7, 206, 246);
+        ;
+        /* background-color: rgb(244, 153, 34); */
+
+    }
+</style>
+
+<header class="header">
+    <nav class="navbar">
+        <div class="div">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/contact">CONTACT</a></li>
+                <li><a href="/todo">Todo</a></li>
+
+            </ul>
+        </div>
+        <div class="div">
+            <ul>
+                <li style="color: rgb(216, 247, 247); font-style: italic;">
+                    Welcome back <%= username %>
+                </li>
+                <li><a href="/logout">Logout</a></li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+</header>
